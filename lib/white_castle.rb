@@ -19,9 +19,10 @@ class WhiteCastle
   def self.start(options)
     server = WEBrick::HTTPServer.new(
       :Port           => options[:port],
-      :FancyIndexing  =>    true
+      :FancyIndexing  =>    true,
+      :DocumentRoot   => "."
     )
-    server.mount "/", WEBrick::HTTPServlet::FileHandler, './'
+    server.mount '/nocache', NonCachingFileHandler
     trap('INT') { server.stop }
     server.start
   end
