@@ -1,0 +1,11 @@
+h1. white_castle
+
+h2. Shamelessly serve anything (from your filesystem)
+
+h3. Usage
+
+@> white_castle 3000@
+This starts a webrick server on port 3000, the default port is 1234
+
+h4. Credit
+All credit goes to Toby Ho: http://tobyho.com/

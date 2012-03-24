@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'white_castle'
+
+WhiteCastle.start(:port => ARGV[0])
