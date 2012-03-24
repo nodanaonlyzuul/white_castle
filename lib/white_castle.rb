@@ -16,9 +16,12 @@ class NonCachingFileHandler < WEBrick::HTTPServlet::FileHandler
 end
 
 class WhiteCastle
-  def start(options = {:port => 1234})
-    server = WEBrick::HTTPServer.new :Port => options[:port]
-    server.mount "/", NonCachingFileHandler , Dir.pwd
+  def self.start(options)
+    server = WEBrick::HTTPServer.new(
+      :Port           => options[:port],
+      :FancyIndexing  =>    true
+    )
+    server.mount "/", WEBrick::HTTPServlet::FileHandler, './'
     trap('INT') { server.stop }
     server.start
   end

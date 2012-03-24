@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require 'white_castle'
 
-WhiteCastle.start(:port => ARGV[0])
+WhiteCastle.start(:port => ARGV[0].to_i || 3000)
