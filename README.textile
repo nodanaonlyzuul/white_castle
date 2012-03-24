@@ -1,12 +1,15 @@
 h1. white_castle
 
-h2. Shamelessly serve anything (from your filesystem)
+h2. Carelessly serve anything (from your filesystem). 
 
 h3. Usage
 
-@> white_castle 3000@
-This starts a webrick server on port 3000, otherwise webrick will pick a port
+@> white_castle 3001@
+This starts a webrick server on port 3001, otherwise it will us port 3000 (default)
+
+@>white_castle ~/Desktop/@
+Serve a diretory other than "."
 
 h4. Credit
 
-All credit goes to Toby Ho: http://tobyho.com/ - I just named it.
+Toby Ho for his blog post (http://tobyho.com/2009/09/16/http-server-in-5-lines-with/)

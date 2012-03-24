@@ -1,4 +1,17 @@
 #!/usr/bin/env ruby
 require 'white_castle'
 
-WhiteCastle.start(:port => ARGV[0].to_i || 3000)
+args = ARGV.compact
+
+if args
+  options = {}
+  if args[0] == "-p"
+    WhiteCastle.start(:port => args[1])
+  else
+    options = {:document_root => args[0]}
+    options.merge!(:port => args[2]) if args[1] == "-p"
+    WhiteCastle.start(options)
+  end
+else
+  WhiteCastle.start()
+end

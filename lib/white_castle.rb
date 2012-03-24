@@ -17,10 +17,14 @@ end
 
 class WhiteCastle
   def self.start(options)
+
+    default_options = {:port => 3000, :document_root => "."}
+    options         = default_options.merge(options)
+    
     server = WEBrick::HTTPServer.new(
       :Port           => options[:port],
-      :FancyIndexing  =>    true,
-      :DocumentRoot   => "."
+      :DocumentRoot   => options[:document_root],
+      :FancyIndexing  =>    true
     )
     server.mount '/nocache', NonCachingFileHandler
     trap('INT') { server.stop }
