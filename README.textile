@@ -2,6 +2,10 @@ h1. white_castle
 
 h2. Carelessly serve anything (from your filesystem). 
 
+h3. Installation
+
+It's a gem, install it like a gem.
+
 h3. Usage
 
 @> white_castle 3001@
