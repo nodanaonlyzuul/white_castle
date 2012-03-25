@@ -1,6 +1,6 @@
 $spec = Gem::Specification.new do |s|
   s.name              = "white_castle"
-  s.version           = '0.1.0'
+  s.version           = '0.1.1'
   s.summary           = "Shamelessly serve anything (from your filesystem)"
   s.authors           = ['nodanaonlyzuul']
   s.email             = ['beholdthepanda@gmail.com']

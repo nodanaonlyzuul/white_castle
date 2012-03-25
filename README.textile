@@ -2,6 +2,16 @@ h1. white_castle
 
 h2. Carelessly serve anything (from your filesystem). 
 
+h3. What?
+
+A command line tool to start Webrick, pointed to a given directory
+
+h3. Why?
+
+I was working on a static HTML page for a project.
+For a few reasons, I wanted to open it in my browser not as a file://
+but served through http://. This is a very simple way to do that.
+
 h3. Installation
 
 It's a gem, install it like a gem.
